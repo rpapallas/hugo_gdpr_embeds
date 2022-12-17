@@ -1,0 +1,51 @@
+<div id="warning-block">
+<div class="alert alert-warning" align="center" role="alert">
+   <h5>Privacy warning regarding YouTube videos on this page</h5>
+
+   <p>
+      This page embeds relevant YouTube video. YouTube may collect personal
+      data and track your behaviour. We will only load the videos after you
+      consent to their use of cookies and similar technologies as described in
+      their <a target="_blank" href="https://policies.google.com/privacy?hl=en-GB">privacy policy</a>.
+   </p>
+
+   <button type="button" 
+           class="btn btn-warning"
+           onclick="showVideosAndHideWarning()">
+      I understand and consent to YouTube's privacy policy; show me the videos
+   </button>
+</div>
+
+   <!-- Placeholder Images -->
+   <div class="row">
+   {{  range split .Inner "\n" }}
+      {{with .}}
+   <div class="col-md-6">
+      <img class="img-fluid mb-3" src="/images/video_placeholder.gif"/>
+   </div>
+      {{ end }}
+   {{ end }}
+   </div>
+</div>
+
+<!-- Actual YouTube Videos -->
+<div id="videos-block" style="display: none">
+   <div class="row">
+   {{  range split .Inner "\n" }}
+   {{with .}}
+   <div class="col-md-6">
+      <iframe width="100%" height="300px"
+         data-src="https://www.youtube-nocookie.com/embed/{{ . }}"
+         title="YouTube video player" 
+         frameborder="0" 
+         allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+         gyroscope; picture-in-picture" 
+         allowfullscreen>
+      </iframe>
+   </div>
+   {{ end }}
+   {{ end }}
+   </div>
+</div>
+
+<script src="/scripts/scripts.js"></script>
