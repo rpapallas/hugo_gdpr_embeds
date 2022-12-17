@@ -6,14 +6,14 @@
 
 ## Disclaimer about GDPR compliance
 
-This is a personal project for embedding videos on my website in a GDPR
-complaint way as I understand it. I am not a solicitor and I am not
-knowledgable with the GDPR law. I did not check this project with a solicitor
-to see if it is complaint and I only make the assumption that "deferring
-embedding of videos until user consents with privacy policy notices" would be
-the right way to do this. If you are going to use this for your own personal
-project or commercial site please do check with a solicitor for compliance. I
-provide no guarantees that this is GDPR complaint in any way.
+This is *a personal project* for embedding videos on my website after user's
+approval. I am *not* a solicitor and I have *no*
+knowledge about GDPR law. I did *not* check this project with a solicitor
+to see if it is complaint with these laws. This project simply attempts to defer
+embedding of videos until the user consents with privacy policies by clicking
+an accept button. If you are going to use this for your own personal
+ or commercial site please do check with a solicitor for compliance. I
+provide *no guarantees* that this is complaint with any law in any way.
 
 ## Installation
 
