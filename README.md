@@ -54,9 +54,10 @@ shortcode will show the videos and move the URL from `data-src` to `src` that
 will cause the videos to be loaded at that time.
 
 
-
+{{% gdpr_embeds/youtube %}}
 IAqByEb6wfo
 tyHdtifvQz8
+{{% /gdpr_embeds/youtube %}}
 
 
 ## Contributing
