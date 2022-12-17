@@ -29,6 +29,14 @@ Add the following lines in your config.toml:
   path = 'github.com/rpapallas/hugo_gdpr_embeds'
 ```
 
+Make sure that your Hugo site project is a module by running the
+following lines:
+
+```
+hugo mod init github.com/YOUR_USERNAME/PROJECT_REPO_NAME
+go mod tidy
+```
+
 ## Usage
 
 ### YouTube
