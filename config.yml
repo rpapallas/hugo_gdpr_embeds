@@ -1,0 +1,8 @@
+module:
+  hugoVersion:
+    min: "0.61.0"
+  mounts:
+  - source: gdpr_embeds
+    target: layouts/shortcodes/gdpr_embeds
+  - source: static
+    target: static

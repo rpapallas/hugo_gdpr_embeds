@@ -21,24 +21,13 @@ This repo at this point assumes that the site uses bootstrap. It uses bootstrap
 CSS to format the warning and the shortcode in general. You can easily change
 the formatting if you wish to match the aesthetics of your site.
 
-1. Make sure you have a `shortcodes` directory under
-   `themes/YOUR_THEME_NAME/layouts/shortcodes`.
-2. Move under the shortcodes directory and clone this repo as `gdpr_embeds`
-   using the following command: `git clone
-   https://github.com/rpapallas/hugo_gdpr_embeds.git gdpr_embeds`
-3. Make sure to delete the `README.md` and `repo_files/` in `gdpr_embeds` otherwise it will create
-   problems.
-4. Update your config file to tell Hugo about the static files of this repo.
-   You can find how to do this
-   [here](https://gohugo.io/content-management/static-files/), but for a
-   `config.toml` file it should be something like that:
+Add the following lines in your config.toml:
 
-   ```toml
-   staticDir = ['static', 'themes/YOUR_THEME_NAME/layouts/shortcodes/gdpr_embeds/static']
-   ```
-   
-   Make sure to replace `YOUR_THEME_NAME` and to include any other static
-   directories your site uses in that list.
+```
+[module]
+[[module.imports]]
+  path = 'github.com/rpapallas/hugo_gdpr_embeds'
+```
 
 ## Usage
 
