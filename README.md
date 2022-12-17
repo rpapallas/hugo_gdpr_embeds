@@ -4,7 +4,7 @@
   <img src="repo_files/demo.gif">
 </p>
 
-## Disclaimer
+## Disclaimer about GDPR compliance
 
 This is a personal project for embedding videos on my website in a GDPR
 complaint way as I understand it. I am not a solicitor and I am not
