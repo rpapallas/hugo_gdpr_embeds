@@ -1,5 +1,9 @@
 # Hugo Shortcode for embedding videos with a privacy warning
 
+<p align="center">
+  <img src="repo_files/demo.gif">
+</p>
+
 ## Disclaimer
 
 This is a personal project for embedding videos on my website in a GDPR
@@ -22,7 +26,7 @@ the formatting if you wish to match the aesthetics of your site.
 2. Move under the shortcodes directory and clone this repo as `gdpr_embeds`
    using the following command: `git clone
    https://github.com/rpapallas/hugo_gdpr_embeds.git gdpr_embeds`
-3. Make sure to delete the README.md in gdpr_embeds otherwise it will create
+3. Make sure to delete the `README.md` and `repo_files/` in `gdpr_embeds` otherwise it will create
    problems.
 4. Update your config file to tell Hugo about the static files of this repo.
    You can find how to do this
@@ -37,8 +41,6 @@ the formatting if you wish to match the aesthetics of your site.
    directories your site uses in that list.
 
 ## Usage
-
-Now you can simply use the following shortcode to embed videos on your site:
 
 ### YouTube
 
@@ -71,4 +73,3 @@ to merge.
 
 This is also a quick project and there could be space for improvement. If you 
 have feedback or want to improve it, please open a PR as well.
-
