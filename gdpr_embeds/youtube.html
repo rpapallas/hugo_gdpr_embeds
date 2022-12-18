@@ -20,9 +20,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. -->
 
-<div id="warning-block">
-   <!-- Warning box -->
-   <div class="alert alert-warning" align="center" role="alert">
+<!-- Warning box (make sure to only show once per page) -->
+{{ if not (.Page.Scratch.Get "warningExists") }}
+   <div id="warning-block" class="alert alert-warning" align="center" role="alert">
       <h5>{{ .Site.Params.gdpr_embeds.youtube.warningTitle }}</h5>
       <p>{{ .Site.Params.gdpr_embeds.youtube.warningMainText | markdownify }}</p>
       <p>{{ .Site.Params.gdpr_embeds.myPrivacyPolicyText | markdownify }}</p>
@@ -30,8 +30,11 @@ SOFTWARE. -->
          {{ .Site.Params.gdpr_embeds.youtube.buttonText }}
       </button>
    </div>
+   {{ .Page.Scratch.Set "warningExists" true }}
+{{ end }}
 
-   <!-- Placeholder Images -->
+<!-- Placeholder Images -->
+<div class="placeholder-images-blocks">
    <div class="row">
    {{  range split .Inner "\n" }}
       {{with .}}
@@ -44,7 +47,7 @@ SOFTWARE. -->
 </div>
 
 <!-- Actual YouTube Videos -->
-<div id="videos-block" style="display: none">
+<div class="video-block" style="display: none">
    <div class="row">
    {{  range split .Inner "\n" }}
    {{with .}}

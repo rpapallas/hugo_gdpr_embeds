@@ -21,15 +21,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. */
 
 function showVideosAndHideWarning() {
-   const videos = document.getElementById("videos-block");
+   // Hide the warning block from the page
    const warning = document.getElementById("warning-block");
-
    warning.style.display = "none";
 
-   const iframes = document.getElementsByTagName("iframe");
-   for(var i = 0; i < iframes.length; i++){
-      iframes[i].setAttribute("src", iframes[i].getAttribute("data-src"));
-   }
+   // Make block with placeholder images invisible.
+   const placeholderImagesBlocks = document.getElementsByClassName("placeholder-images-blocks");
+   for(var i = 0; i < placeholderImagesBlocks.length; i++)
+      placeholderImagesBlocks[i].style.display = "none";
 
-   videos.style.display = "block";
+   // Move URL from data-src to src so that iframes will be loaded properly now.
+   const iframes = document.getElementsByTagName("iframe");
+   for(var i = 0; i < iframes.length; i++)
+      iframes[i].setAttribute("src", iframes[i].getAttribute("data-src"));
+
+   // Make the block with iframes visible.
+   const videoBlocks = document.getElementsByClassName("video-block");
+   for(var i = 0; i < videoBlocks.length; i++)
+      videoBlocks[i].style.display = "block";
 }
