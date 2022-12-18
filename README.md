@@ -58,20 +58,28 @@ file, for example for `config.toml`:
 Make sure you set the text above appropriately to clearly explain to your users
 the implications of watching a video, your privacy policy etc.
 
+Here is how this would look like:
+
+![repo_files/example.png]
+
 ## Usage
 
 ### YouTube
 
-The way YouTube video embed happens is that the shortcode will pick up
-the list of YouTube video IDs and load them into iframes. By default, the
-shortcode will append the ID to `https://www.youtube-nocookie.com/embed/` which
-defers cookies/tracking until user clicks the play button. To be extra careful,
-the iframes are hidden and replaced with placeholder images and the url is
-added to the `data-src` attribute of the iframe instead of `src` 
-which will cause it not to load automatically on page load. Once the user
-consents by clicking on the button of the privacy warning message, the 
-shortcode will show the videos and move the URL from `data-src` to `src` that 
-will cause the videos to be loaded at that time.
+The way YouTube video embed is implemented is that the shortcode will pick up a
+list of YouTube video IDs and load them into iframes. 
+
+By default, the shortcode will append the ID to
+`https://www.youtube-nocookie.com/embed/` which defers cookies until user
+clicks the play button. 
+
+To be extra cautious, the iframes are hidden and replaced with placeholder
+images and the URL is added to the `data-src` attribute of the iframe instead
+of the `src` which as a result will not load the videos automatically on page
+load. Once the user consents by clicking on the button of the privacy warning
+box, the shortcode will make the iframes visible and move the URL from the
+`data-src` to the `src` attribute which will cause the videos to be loaded at
+that time.
 
 
 ```md
