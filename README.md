@@ -37,6 +37,27 @@ hugo mod init github.com/YOUR_USERNAME/PROJECT_REPO_NAME
 go mod tidy
 ```
 
+Finally, make sure to add the following configuration in your site's config
+file, for example for `config.toml`:
+
+```toml
+...
+
+[params]
+   [params.gdpr_embeds]
+      myPrivacyPolicyText = 'Put your privacy text here, you can use markdown to link to your [privacy policy](/privacy) page.'
+      [params.gdpr_embeds.youtube]
+         warningTitle = 'This is the title of the warning box'
+         warningMainText = """This is the warning text of the warning box.
+         Here you need to explain the implications of watching a youtube video.
+         You can use markdown to link to the [privacy policy](https://www.....) 
+         of youtube."""
+         buttonText = 'This is the text of the button the user will click to agree to show the videos'
+```
+
+Make sure you set the text above appropriately to clearly explain to your users
+the implications of watching a video, your privacy policy etc.
+
 ## Usage
 
 ### YouTube
