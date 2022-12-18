@@ -60,7 +60,7 @@ the implications of watching a video, your privacy policy etc.
 
 Here is how this would look like:
 
-![repo_files/example.png]
+![Example](repo_files/example.png)
 
 ## Usage
 
