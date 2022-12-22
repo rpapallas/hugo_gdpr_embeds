@@ -1,5 +1,7 @@
 # Hugo Shortcode for embedding videos with a privacy warning
 
+This is a Hugo shortcode that allows one to embed YouTube videos with user consent. The shortcode will defer embedding the videos on the page until the user clicks an accept button. The warning box is customisable through your website's config file. Although the shortcode currently supports YouTube embeds only, it can easily be extended to support other embeds. If you want to see another embed supported, please open an issue or submit a pull request.
+
 <p align="center">
   <img src="repo_files/demo.gif">
 </p>
